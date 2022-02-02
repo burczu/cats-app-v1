@@ -1,24 +1,30 @@
-import React from 'react';
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import React, { useEffect } from 'react';
+import type { NextPage, GetServerSideProps } from 'next';
+import { IHomePageProps } from './types';
+import useCats from '../model/cats';
 
-const Home: NextPage = () => {
+const Home: NextPage<IHomePageProps> = ({ cats }) => {
+  const { initCats } = useCats();
+
+  useEffect(() => {
+    initCats(cats);
+  }, [cats, initCats]);
+
   return (
-    <div>
-      <Head>
-        <title>Cats App v1.0</title>
-        <meta
-          name="description"
-          content="Cats App is pet project to test some new things..."
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
-        <h1>Cats App v1.0</h1>
-      </main>
-    </div>
+    <main>
+      <h1>Cats App v1.0</h1>
+    </main>
   );
+};
+
+export const getServerSideProps: GetServerSideProps<
+  IHomePageProps
+> = async () => {
+  return {
+    props: {
+      cats: [{ name: 'inka' }],
+    },
+  };
 };
 
 export default Home;
