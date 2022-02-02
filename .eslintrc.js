@@ -1,6 +1,6 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'prettier'],
+  plugins: ['@typescript-eslint', 'prettier', 'cypress'],
   extends: [
     'next/core-web-vitals',
     'eslint:recommended',
@@ -9,6 +9,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:cypress/recommended',
     'prettier',
   ],
   rules: {
@@ -56,5 +57,8 @@ module.exports = {
     document: true,
     sessionStorage: true,
     history: true,
+  },
+  env: {
+    'cypress/globals': true,
   },
 };
