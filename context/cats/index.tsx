@@ -1,1 +1,1 @@
-export { CatsContext, default, useCatsContext } from './context';
+export { default, useCatsContext } from './context';

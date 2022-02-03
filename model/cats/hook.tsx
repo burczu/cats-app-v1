@@ -1,5 +1,5 @@
 import { ICatsHook } from './types';
-import { useCatsContext } from '../../context/cats';
+import { useCatsContext } from '@context/cats';
 
 const useCats = (): ICatsHook => {
   const { setCats } = useCatsContext();
