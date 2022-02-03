@@ -57,6 +57,7 @@ module.exports = {
     document: true,
     sessionStorage: true,
     history: true,
+    jest: true,
   },
   env: {
     'cypress/globals': true,
