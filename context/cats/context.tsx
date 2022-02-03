@@ -1,8 +1,13 @@
 import React, { createContext, useContext, FC, useState } from 'react';
 import { ICatsContext } from './types';
+import { getUseContext } from '../../misc/helpers/context';
 
-export const CatsContext = createContext({} as ICatsContext);
-export const useCatsContext = () => useContext(CatsContext);
+const CatsContext = createContext<ICatsContext | undefined>(undefined);
+
+export const useCatsContext = getUseContext<ICatsContext>(
+  CatsContext,
+  useContext,
+);
 
 const CatsContextProvider: FC = ({ children }) => {
   const [cats, setCats] = useState<any[]>([]);
