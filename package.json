@@ -10,7 +10,7 @@
     "lint:eslint": "eslint --fix \"./**/*.{js,ts,tsx}\"",
     "test:cypress": "cypress open",
     "test:jest": "jest --passWithNoTests",
-    "test:jest:watch": "jest --watch --passWithNoTests",
+    "test:jest:watch": "jest --watch --passWithNoTests --verbose false",
     "prepare": "husky install"
   },
   "dependencies": {

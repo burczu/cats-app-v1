@@ -13,12 +13,12 @@ const customJestConfig = {
   // if using TypeScript with a baseUrl set to the root directory then you need the below for alias' to work
   moduleDirectories: ['node_modules', '<rootDir>/'],
   moduleNameMapper: {
-    '^@components(.*)$': '<rootDir>/components/$1',
-    '^@context(.*)$': '<rootDir>/context/$1',
-    '^@misc(.*)$': '<rootDir>/misc/$1',
-    '^@model(.*)$': '<rootDir>/model/$1',
-    '^@pages(.*)$': '<rootDir>/pages/$1',
-    '^@styles(.*)$': '<rootDir>/styles/$1',
+    '^@components/(.*)$': '<rootDir>/components/$1',
+    '^@context/(.*)$': '<rootDir>/context/$1',
+    '^@misc/(.*)$': '<rootDir>/misc/$1',
+    '^@model/(.*)$': '<rootDir>/model/$1',
+    '^@pages/(.*)$': '<rootDir>/pages/$1',
+    '^@styles/(.*)$': '<rootDir>/styles/$1',
   },
   testEnvironment: 'jest-environment-jsdom',
   testPathIgnorePatterns: ['cypress'],
