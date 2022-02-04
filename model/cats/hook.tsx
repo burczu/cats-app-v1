@@ -1,7 +1,7 @@
 import { ICatsHook } from './types';
 import { useCatsContext } from '@context/cats';
 
-const useCats = (): ICatsHook => {
+export const useCats = (): ICatsHook => {
   const { setCats } = useCatsContext();
 
   const initCats = (initialValue: any[]) => {
@@ -12,5 +12,3 @@ const useCats = (): ICatsHook => {
     initCats,
   };
 };
-
-export default useCats;

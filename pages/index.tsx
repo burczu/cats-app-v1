@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import type { NextPage, GetServerSideProps } from 'next';
 import { IHomePageProps } from './types';
-import useCats from '@model/cats';
+import { useCats } from '@model/cats';
 
 const Home: NextPage<IHomePageProps> = ({ cats }) => {
   const { initCats } = useCats();
