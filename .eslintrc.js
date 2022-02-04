@@ -33,6 +33,7 @@ module.exports = {
     '@typescript-eslint/no-non-null-asserted-optional-chain': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/interface-name-prefix': 'off',
+    'no-prototype-builtins': 'off',
     'prettier/prettier': ['error', { singleQuote: true }],
   },
   settings: {
