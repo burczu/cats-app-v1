@@ -19,6 +19,7 @@ const customJestConfig = {
     '^@model/(.*)$': '<rootDir>/model/$1',
     '^@pages/(.*)$': '<rootDir>/pages/$1',
     '^@styles/(.*)$': '<rootDir>/styles/$1',
+    '^@services/(.*)$': '<rootDir>/services/$1',
   },
   testEnvironment: 'jest-environment-jsdom',
   testPathIgnorePatterns: ['cypress'],
