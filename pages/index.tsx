@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import type { NextPage, GetServerSideProps } from 'next';
 import { IHomePageProps } from './types';
 import { useCats } from '@model/cats';
+import { getCats } from '@services/cats';
 
 const Home: NextPage<IHomePageProps> = ({ cats }) => {
   const { initCats } = useCats();
@@ -20,9 +21,11 @@ const Home: NextPage<IHomePageProps> = ({ cats }) => {
 export const getServerSideProps: GetServerSideProps<
   IHomePageProps
 > = async () => {
+  const cats = await getCats();
+
   return {
     props: {
-      cats: [{ name: 'inka' }],
+      cats,
     },
   };
 };
