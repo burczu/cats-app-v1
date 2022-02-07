@@ -1,5 +1,5 @@
 import { get } from './index';
-import { API_KEY } from '@misc/constants';
+import { API_BASE_URL, API_KEY } from '@misc/constants';
 
 describe('fetch wrapper', () => {
   beforeEach(() => {
@@ -17,7 +17,8 @@ describe('fetch wrapper', () => {
   });
 
   it('should call fetch with correct parameters', () => {
-    const expectedUrl = 'test123';
+    const testUrl = '/test123';
+    const expectedUrl = `${API_BASE_URL}${testUrl}`;
     const expectedParameter = {
       method: 'GET',
       headers: {
@@ -25,7 +26,7 @@ describe('fetch wrapper', () => {
       },
     };
 
-    get(expectedUrl);
+    get(testUrl);
     expect(global.fetch).toHaveBeenCalledWith(expectedUrl, expectedParameter);
   });
 });
