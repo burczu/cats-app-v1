@@ -16,17 +16,19 @@ describe('fetch wrapper', () => {
     global.fetch.mockClear();
   });
 
-  it('should call fetch with correct parameters', () => {
-    const testUrl = '/test123';
-    const expectedUrl = `${API_BASE_URL}${testUrl}`;
-    const expectedParameter = {
-      method: 'GET',
-      headers: {
-        'x-api-key': API_KEY,
-      },
-    };
+  describe('when calling get helper', () => {
+    it('should call fetch with correct parameters', () => {
+      const testUrl = '/test123';
+      const expectedUrl = `${API_BASE_URL}${testUrl}`;
+      const expectedParameter = {
+        method: 'GET',
+        headers: {
+          'x-api-key': API_KEY,
+        },
+      };
 
-    get(testUrl);
-    expect(global.fetch).toHaveBeenCalledWith(expectedUrl, expectedParameter);
+      get(testUrl);
+      expect(global.fetch).toHaveBeenCalledWith(expectedUrl, expectedParameter);
+    });
   });
 });
