@@ -1,3 +1,5 @@
+import { ICat } from '@services/cats/types';
+
 export interface IHomePageProps {
-  cats: any[];
+  cats: ICat[];
 }

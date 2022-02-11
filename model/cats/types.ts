@@ -1,3 +1,6 @@
+import { ICat } from '@services/cats/types';
+
 export interface ICatsHook {
-  initCats: (initialValue: any[]) => void;
+  cats: ICat[];
+  initCats: (initialValue: ICat[]) => void;
 }

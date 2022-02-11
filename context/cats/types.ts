@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction } from 'react';
+import { ICat } from '@services/cats/types';
 
 export interface ICatsContext {
-  cats: any[];
+  cats: ICat[];
   setCats: Dispatch<SetStateAction<any[]>>;
 }
