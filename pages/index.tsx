@@ -3,6 +3,7 @@ import type { NextPage, GetServerSideProps } from 'next';
 import { IHomePageProps } from './types';
 import { useCats } from '@model/cats';
 import { getCats } from '@services/cats';
+import Cats from '@components/cats';
 
 const Home: NextPage<IHomePageProps> = ({ cats }) => {
   const { initCats } = useCats();
@@ -14,6 +15,7 @@ const Home: NextPage<IHomePageProps> = ({ cats }) => {
   return (
     <main>
       <h1>Cats App v1.0</h1>
+      <Cats />
     </main>
   );
 };
