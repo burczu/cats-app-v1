@@ -12,12 +12,7 @@ const Home: NextPage<IHomePageProps> = ({ cats }) => {
     initCats(cats);
   }, [cats, initCats]);
 
-  return (
-    <main>
-      <h1>Cats App v1.0</h1>
-      <Cats />
-    </main>
-  );
+  return <Cats />;
 };
 
 export const getServerSideProps: GetServerSideProps<

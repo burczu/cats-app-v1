@@ -14,7 +14,10 @@ const CustomApp = ({ Component, pageProps }: AppProps) => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <CatsContextProvider>
-      <Component {...pageProps} />
+      <main>
+        <h1>Cats App v1.0</h1>
+        <Component {...pageProps} />
+      </main>
     </CatsContextProvider>
   </>
 );
