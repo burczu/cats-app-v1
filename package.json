@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:ts": "yarn dev & yarn ts:watch",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -11,6 +12,8 @@
     "test:cypress": "cypress open",
     "test:jest": "jest --passWithNoTests",
     "test:jest:watch": "jest --watch --passWithNoTests --verbose false",
+    "ts": "tsc --noEmit --incremental",
+    "ts:watch": "yarn ts --watch",
     "prepare": "husky install"
   },
   "dependencies": {
